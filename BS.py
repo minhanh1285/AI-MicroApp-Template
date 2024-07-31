@@ -11,87 +11,73 @@ class BrightspaceHelpdesk:
             "add people": "https://www.brightspacehelp.usc.edu/instructors/adding-people-to-your-course/",
             "zoom meetings": "https://www.brightspacehelp.usc.edu/instructors/why-arent-my-zoom-class-meetings-in-brightspace/",
             "merge courses": "https://www.brightspacehelp.usc.edu/merging-courses-faculty-only/",
-Prepare for Brightspace https://www.brightspacehelp.usc.edu/instructors/prepare-for-brightspace/
-Prepare Your Students for Brightspace https://www.brightspacehelp.usc.edu/instructors/prepare-your-students-for-brightspace/
-Getting a Brightspace Course https://www.brightspacehelp.usc.edu/getting-a-brightspace-course/
-Organize Your Course Materials via Modules and Sub-modules https://www.brightspacehelp.usc.edu/instructors/organize-your-courses-materials-via-modules-and-sub-modules/
-Copying Course Content https://www.brightspacehelp.usc.edu/copying-course-content/
-Adding People to Your Course https://www.brightspacehelp.usc.edu/instructors/adding-people-to-your-course/
-Why aren’t my Zoom class meetings in Brightspace? https://www.brightspacehelp.usc.edu/instructors/why-arent-my-zoom-class-meetings-in-brightspace/
-Merging Courses https://www.brightspacehelp.usc.edu/merging-courses-faculty-only/
-Evaluate assignments using the Assignments tool https://community.d2l.com/brightspace/kb/articles/3529-evaluate-assignments-using-the-assignments-tool
-Enter grades in the Grades tool https://community.d2l.com/brightspace/kb/articles/3548-enter-grades-in-the-grades-tools
-Course Evaluations https://www.brightspacehelp.usc.edu/instructors/course-evaluations/
-Create an assignment https://community.d2l.com/brightspace/kb/articles/3608-create-an-assignment
-Navigate Brightspace and find your course https://community.d2l.com/brightspace/kb/articles/5451-navigate-brightspace-and-find-your-course
-Create an Announcement https://www.youtube.com/watch?v=-JlI6OdzwL0
-Create a Discussion topic and Forum https://www.youtube.com/watch?v=4Jw6GwPQN8M&list=PLxHabmZzFY6mbZnghbtOiYppofKPWe581&index=41
-Grades Tool – Manage Grades https://www.youtube.com/watch?v=_Uw-b-CyEPk&list=PLxHabmZzFY6mbZnghbtOiYppofKPWe581&index=22
-Grades Tool – Setup Wizard https://www.youtube.com/watch?v=Pl4U3rcbPOM&list=PLxHabmZzFY6mbZnghbtOiYppofKPWe581&index=18
-Manage Account Settings https://www.youtube.com/watch?v=sCcHZlC-b1o&list=PLxHabmZzFY6mbZnghbtOiYppofKPWe581&index=23
-Adding the Work to Do Widget To Your Homepage https://www.youtube.com/watch?v=cgw9pi6wUcY&list=PLxHabmZzFY6mbZnghbtOiYppofKPWe581&index=24
-Class Progress Overview https://www.youtube.com/watch?v=oybFY7yPabE&list=PLxHabmZzFY6mbZnghbtOiYppofKPWe581&index=26
-Classlist Overview https://www.youtube.com/watch?v=4lh69B9Qsbo&list=PLxHabmZzFY6mbZnghbtOiYppofKPWe581&index=27
-Media Library Overview https://www.youtube.com/watch?v=D8fWOekyD_Q&list=PLxHabmZzFY6mbZnghbtOiYppofKPWe581&index=28
-Use Discussions for Journaling https://www.youtube.com/watch?v=PZlq9cMtDag&list=PLxHabmZzFY6mbZnghbtOiYppofKPWe581&index=32
-Create a Randomized Set of Quiz Questions https://www.youtube.com/watch?v=SsgnoSMSIqI&list=PLxHabmZzFY6mbZnghbtOiYppofKPWe581&index=37
-Using the Brightspace (HTML) Editor https://www.youtube.com/watch?v=BEYL4Z1fgJs&list=PLxHabmZzFY6mbZnghbtOiYppofKPWe581&index=43
-Evaluate discussions https://www.youtube.com/watch?v=Rc_No_-zbYA&list=PLxHabmZzFY6mbZnghbtOiYppofKPWe581&index=47
-Browser support https://community.d2l.com/brightspace/kb/articles/5663-browser-support#supported-browsersz
-Sending Email https://www.brightspacehelp.usc.edu/instructors/sending-email/
-Turnitin: Assignment Integration, Student Submission, and Grading https://www.brightspacehelp.usc.edu/instructors/turnitin-assignment-integration-student-submission-and-grading/
-About Manage Files https://community.d2l.com/brightspace/kb/articles/3328-about-manage-files
-Viewing Turnitin Originality Reports https://www.brightspacehelp.usc.edu/viewing-turnitin-originality-reports/
-Grading, Rubrics, and Providing Feedback for a Turnitin Assignment https://www.brightspacehelp.usc.edu/rubrics-grading-and-providing-feedback-for-a-turnitin-assignment/
-Create and configure a quiz https://community.d2l.com/brightspace/kb/articles/3413-create-and-configure-a-quiz
-Course Notifications https://www.brightspacehelp.usc.edu/communicating-with-students/sending-notifications/
-Set up Library Course Reserves (ARES): https://www.brightspacehelp.usc.edu/files/2023/12/Instructor-ARES_-LTI-HELP-GUIDE.pdf
-Pin a course https://bswrittentutorials.s3.us-west-1.amazonaws.com/Pin+a+Course.pdf
-make the course active, available for students: https://community.d2l.com/brightspace/kb/articles/22383-activate-your-course#make-your-course-available-and-active
-Upload and record video with the Media Library https://bswrittentutorials.s3.us-west-1.amazonaws.com/Record+and+Post+a+Video+or+Audio+Lecture.pdf
-set up Zoom meetings https://bswrittentutorials.s3.us-west-1.amazonaws.com/Set+Up+Zoom+Meetings.pdf
-welcome email to students: https://bswrittentutorials.s3.us-west-1.amazonaws.com/Welcome-to-Brightspace-Email-to-Students.docx
-welcome email to TA: https://bswrittentutorials.s3.us-west-1.amazonaws.com/TA-Welcome-To-Brightspace-Email.docx
-bookable meetings: https://bswrittentutorials.s3.us-west-1.amazonaws.com/Set+up+Bookable+Appointments.pdf
-create short video or audio note: https://bswrittentutorials.s3.us-west-1.amazonaws.com/Record+and+Post+a+Short+Video+or+Audio+Note.pdf
-USC syllabus template: https://bswrittentutorials.s3.us-west-1.amazonaws.com/Syllabus-Template-June-2024.docx
-USC Brightspace login page: https://brightspace.usc.edu
-Create a Quiz https://www.youtube.com/watch?v=2oy6qfQSaWM&list=PLxHabmZzFY6mbZnghbtOiYppofKPWe581&index=4
-Create an assignment https://www.youtube.com/watch?v=wLJXYjU3cOU&list=PLxHabmZzFY6mbZnghbtOiYppofKPWe581&index=4&t=12s
-create course content https://www.youtube.com/watch?v=O-SUwztncyQ&list=PLxHabmZzFY6mbZnghbtOiYppofKPWe581&index=5
-Set Up a Course https://www.youtube.com/watch?v=Pji71PsBVTg&list=PLxHabmZzFY6mbZnghbtOiYppofKPWe581&index=6&t=11s
-Create and Edit a Rubric https://www.youtube.com/watch?v=kcgBMAVqeuo&list=PLxHabmZzFY6mbZnghbtOiYppofKPWe581&index=13&t=9s
-Grading in Brightspace https://www.youtube.com/watch?v=RYW3T8vvK5Q&list=PLxHabmZzFY6mbZnghbtOiYppofKPWe581&index=19
-Grading submissions in Assignments https://www.youtube.com/watch?v=dKcFmfGrk5o&list=PLxHabmZzFY6mbZnghbtOiYppofKPWe581&index=46
-Set-up extra credit https://www.brightspacehelp.usc.edu/instructors/set-up-extra-credit/
-Brightspace instructors guide: https://www.brightspacehelp.usc.edu/instructors/
-            # ... (add all other resources here)
+            "evaluate assignments": "https://community.d2l.com/brightspace/kb/articles/3529-evaluate-assignments-using-the-assignments-tool",
+            "enter grades": "https://community.d2l.com/brightspace/kb/articles/3548-enter-grades-in-the-grades-tools",
+            "course evaluations": "https://www.brightspacehelp.usc.edu/instructors/course-evaluations/",
+            "create assignment": "https://community.d2l.com/brightspace/kb/articles/3608-create-an-assignment",
+            "navigate brightspace": "https://community.d2l.com/brightspace/kb/articles/5451-navigate-brightspace-and-find-your-course",
+            "create announcement": "https://www.youtube.com/watch?v=-JlI6OdzwL0",
+            "create discussion": "https://www.youtube.com/watch?v=4Jw6GwPQN8M&list=PLxHabmZzFY6mbZnghbtOiYppofKPWe581&index=41",
+            "manage grades": "https://www.youtube.com/watch?v=_Uw-b-CyEPk&list=PLxHabmZzFY6mbZnghbtOiYppofKPWe581&index=22",
+            "setup grades": "https://www.youtube.com/watch?v=Pl4U3rcbPOM&list=PLxHabmZzFY6mbZnghbtOiYppofKPWe581&index=18",
+            "manage account": "https://www.youtube.com/watch?v=sCcHZlC-b1o&list=PLxHabmZzFY6mbZnghbtOiYppofKPWe581&index=23",
+            "add work to do widget": "https://www.youtube.com/watch?v=cgw9pi6wUcY&list=PLxHabmZzFY6mbZnghbtOiYppofKPWe581&index=24",
+            "class progress": "https://www.youtube.com/watch?v=oybFY7yPabE&list=PLxHabmZzFY6mbZnghbtOiYppofKPWe581&index=26",
+            "classlist": "https://www.youtube.com/watch?v=4lh69B9Qsbo&list=PLxHabmZzFY6mbZnghbtOiYppofKPWe581&index=27",
+            "media library": "https://www.youtube.com/watch?v=D8fWOekyD_Q&list=PLxHabmZzFY6mbZnghbtOiYppofKPWe581&index=28",
+            "discussions for journaling": "https://www.youtube.com/watch?v=PZlq9cMtDag&list=PLxHabmZzFY6mbZnghbtOiYppofKPWe581&index=32",
+            "randomized quiz questions": "https://www.youtube.com/watch?v=SsgnoSMSIqI&list=PLxHabmZzFY6mbZnghbtOiYppofKPWe581&index=37",
+            "html editor": "https://www.youtube.com/watch?v=BEYL4Z1fgJs&list=PLxHabmZzFY6mbZnghbtOiYppofKPWe581&index=43",
+            "evaluate discussions": "https://www.youtube.com/watch?v=Rc_No_-zbYA&list=PLxHabmZzFY6mbZnghbtOiYppofKPWe581&index=47",
+            "browser support": "https://community.d2l.com/brightspace/kb/articles/5663-browser-support#supported-browsersz",
+            "send email": "https://www.brightspacehelp.usc.edu/instructors/sending-email/",
+            "turnitin": "https://www.brightspacehelp.usc.edu/instructors/turnitin-assignment-integration-student-submission-and-grading/",
+            "manage files": "https://community.d2l.com/brightspace/kb/articles/3328-about-manage-files",
+            "originality reports": "https://www.brightspacehelp.usc.edu/viewing-turnitin-originality-reports/",
+            "rubrics": "https://www.brightspacehelp.usc.edu/rubrics-grading-and-providing-feedback-for-a-turnitin-assignment/",
+            "create quiz": "https://community.d2l.com/brightspace/kb/articles/3413-create-and-configure-a-quiz",
+            "course notifications": "https://www.brightspacehelp.usc.edu/communicating-with-students/sending-notifications/",
+            "library course reserves": "https://www.brightspacehelp.usc.edu/files/2023/12/Instructor-ARES_-LTI-HELP-GUIDE.pdf",
+            "pin course": "https://bswrittentutorials.s3.us-west-1.amazonaws.com/Pin+a+Course.pdf",
+            "activate course": "https://community.d2l.com/brightspace/kb/articles/22383-activate-your-course#make-your-course-available-and-active",
+            "record video": "https://bswrittentutorials.s3.us-west-1.amazonaws.com/Record+and+Post+a+Video+or+Audio+Lecture.pdf",
+            "setup zoom": "https://bswrittentutorials.s3.us-west-1.amazonaws.com/Set+Up+Zoom+Meetings.pdf",
+            "welcome email students": "https://bswrittentutorials.s3.us-west-1.amazonaws.com/Welcome-to-Brightspace-Email-to-Students.docx",
+            "welcome email ta": "https://bswrittentutorials.s3.us-west-1.amazonaws.com/TA-Welcome-To-Brightspace-Email.docx",
+            "bookable meetings": "https://bswrittentutorials.s3.us-west-1.amazonaws.com/Set+up+Bookable+Appointments.pdf",
+            "short video note": "https://bswrittentutorials.s3.us-west-1.amazonaws.com/Record+and+Post+a+Short+Video+or+Audio+Note.pdf",
+            "syllabus template": "https://bswrittentutorials.s3.us-west-1.amazonaws.com/Syllabus-Template-June-2024.docx",
+            "login": "https://brightspace.usc.edu",
+            "extra credit": "https://www.brightspacehelp.usc.edu/instructors/set-up-extra-credit/",
+            "instructors guide": "https://www.brightspacehelp.usc.edu/instructors/"
         }
 
     def get_response(self, user_query):
-        # Convert query to lowercase for case-insensitive matching
         user_query = user_query.lower()
-        
-        # Check if any resource keywords match the user query
+        matched_resources = []
+
         for keyword, url in self.resources.items():
             if keyword in user_query:
-                return self.format_response(keyword, url)
-        
-        # If no match found, return a default response
+                matched_resources.append((keyword, url))
+
+        if matched_resources:
+            return self.format_response(matched_resources)
         return self.default_response()
 
-    def format_response(self, keyword, url):
-        response = f"To {keyword}, please follow these steps:\n\n"
-        response += "1. Log in to your Brightspace account\n"
-        response += "2. Navigate to the relevant section\n"
-        response += f"3. Follow the detailed instructions provided in this guide: {url}\n\n"
+    def format_response(self, matched_resources):
+        response = "Here are the resources that may help you:\n\n"
+        for keyword, url in matched_resources:
+            response += f"To {keyword}:\n"
+            response += f"1. Log in to your Brightspace account at {self.resources['login']}\n"
+            response += "2. Navigate to the relevant section\n"
+            response += f"3. Follow the detailed instructions provided in this guide: {url}\n\n"
         response += self.get_footer()
         return response
 
     def default_response(self):
         response = "I'm sorry, I couldn't find specific information for your query. "
         response += "For general guidance, please visit the Brightspace instructors guide: "
-        response += "https://www.brightspacehelp.usc.edu/instructors/\n\n"
+        response += f"{self.resources['instructors guide']}\n\n"
         response += self.get_footer()
         return response
 
