@@ -1,0 +1,70 @@
+import re
+
+class BrightspaceHelpdesk:
+    def __init__(self):
+        self.resources = {
+            "prepare for brightspace": "https://www.brightspacehelp.usc.edu/instructors/prepare-for-brightspace/",
+            "prepare students": "https://www.brightspacehelp.usc.edu/instructors/prepare-your-students-for-brightspace/",
+            "get course": "https://www.brightspacehelp.usc.edu/getting-a-brightspace-course/",
+            "organize materials": "https://www.brightspacehelp.usc.edu/instructors/organize-your-courses-materials-via-modules-and-sub-modules/",
+            "copy content": "https://www.brightspacehelp.usc.edu/copying-course-content/",
+            "add people": "https://www.brightspacehelp.usc.edu/instructors/adding-people-to-your-course/",
+            "zoom meetings": "https://www.brightspacehelp.usc.edu/instructors/why-arent-my-zoom-class-meetings-in-brightspace/",
+            "merge courses": "https://www.brightspacehelp.usc.edu/merging-courses-faculty-only/",
+            # ... (add all other resources here)
+        }
+
+    def get_response(self, user_query):
+        # Convert query to lowercase for case-insensitive matching
+        user_query = user_query.lower()
+        
+        # Check if any resource keywords match the user query
+        for keyword, url in self.resources.items():
+            if keyword in user_query:
+                return self.format_response(keyword, url)
+        
+        # If no match found, return a default response
+        return self.default_response()
+
+    def format_response(self, keyword, url):
+        response = f"To {keyword}, please follow these steps:\n\n"
+        response += "1. Log in to your Brightspace account\n"
+        response += "2. Navigate to the relevant section\n"
+        response += f"3. Follow the detailed instructions provided in this guide: {url}\n\n"
+        response += self.get_footer()
+        return response
+
+    def default_response(self):
+        response = "I'm sorry, I couldn't find specific information for your query. "
+        response += "For general guidance, please visit the Brightspace instructors guide: "
+        response += "https://www.brightspacehelp.usc.edu/instructors/\n\n"
+        response += self.get_footer()
+        return response
+
+    def get_footer(self):
+        footer = "If you need further assistance, please feel free to "
+        footer += "[schedule a Zoom meeting](https://calendly.com/d/cpxx-s9g-9qv/brightspace-troubleshooting) "
+        footer += "with our Instructional Designer or reach out to:\n"
+        footer += "- Technical Support Line: 888-895-2812\n"
+        footer += "- Email Support: usc@d2l.com\n"
+        footer += "**For USC-Specific Requests**:\n"
+        footer += "- ITS Email Support: brightspace@usc.edu\n"
+        footer += "- ITS Support Desk Hotline: 213-740-5555 (Instructors dial 2)\n"
+        footer += "*Disclaimer: Virtual assistance can make mistakes. Please verify important information.*"
+        return footer
+
+def main():
+    helpdesk = BrightspaceHelpdesk()
+    print("Welcome to the USC Brightspace IT Helpdesk!")
+    print("How can I assist you today? (Type 'exit' to end the conversation)")
+
+    while True:
+        user_input = input("\nYour question: ")
+        if user_input.lower() == 'exit':
+            print("Thank you for using the USC Brightspace IT Helpdesk. Goodbye!")
+            break
+        response = helpdesk.get_response(user_input)
+        print("\nHelpdesk: " + response)
+
+if __name__ == "__main__":
+    main()
