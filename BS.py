@@ -95,7 +95,7 @@ class BrightspaceHelpdesk:
 
 def main():
     helpdesk = BrightspaceHelpdesk()
-    print("Welcome to the USC Brightspace IT Helpdesk!")
+    print("Welcome to the Brightspace Helpdesk Chatbot, your virtual IT support assistant dedicated to helping faculty members navigate and utilize Brightspace effectively.")
     print("How can I assist you today? (Type 'exit' to end the conversation)")
 
     while True:
