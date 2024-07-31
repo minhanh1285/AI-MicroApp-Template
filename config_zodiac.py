@@ -1,165 +1,110 @@
-APP_TITLE = "Zodiac Symbol"
-APP_INTRO = """This is a demonstration app that determines a users zodiac symbol based on their birth month and date. 
-"""
+import re
 
-APP_HOW_IT_WORKS = """
-This app collects the name, birth Month, and birth date of the user, and provides them their Zodiac symbol. 
-It utilizes the OpenAI and other AI APIs to send a custom prompt to AI with the user's inputs and returns the AI's response. 
- """
+class BrightspaceHelpdesk:
+    def __init__(self):
+        self.resources = {
+            "prepare for brightspace": "https://www.brightspacehelp.usc.edu/instructors/prepare-for-brightspace/",
+            "prepare students": "https://www.brightspacehelp.usc.edu/instructors/prepare-your-students-for-brightspace/",
+            "get course": "https://www.brightspacehelp.usc.edu/getting-a-brightspace-course/",
+            "organize materials": "https://www.brightspacehelp.usc.edu/instructors/organize-your-courses-materials-via-modules-and-sub-modules/",
+            "copy content": "https://www.brightspacehelp.usc.edu/copying-course-content/",
+            "add people": "https://www.brightspacehelp.usc.edu/instructors/adding-people-to-your-course/",
+            "zoom meetings": "https://www.brightspacehelp.usc.edu/instructors/why-arent-my-zoom-class-meetings-in-brightspace/",
+            "merge courses": "https://www.brightspacehelp.usc.edu/merging-courses-faculty-only/",
+            "evaluate assignments": "https://community.d2l.com/brightspace/kb/articles/3529-evaluate-assignments-using-the-assignments-tool",
+            "enter grades": "https://community.d2l.com/brightspace/kb/articles/3548-enter-grades-in-the-grades-tools",
+            "course evaluations": "https://www.brightspacehelp.usc.edu/instructors/course-evaluations/",
+            "create assignment": "https://community.d2l.com/brightspace/kb/articles/3608-create-an-assignment",
+            "navigate brightspace": "https://community.d2l.com/brightspace/kb/articles/5451-navigate-brightspace-and-find-your-course",
+            "create announcement": "https://www.youtube.com/watch?v=-JlI6OdzwL0",
+            "create discussion": "https://www.youtube.com/watch?v=4Jw6GwPQN8M&list=PLxHabmZzFY6mbZnghbtOiYppofKPWe581&index=41",
+            "manage grades": "https://www.youtube.com/watch?v=_Uw-b-CyEPk&list=PLxHabmZzFY6mbZnghbtOiYppofKPWe581&index=22",
+            "setup grades": "https://www.youtube.com/watch?v=Pl4U3rcbPOM&list=PLxHabmZzFY6mbZnghbtOiYppofKPWe581&index=18",
+            "manage account": "https://www.youtube.com/watch?v=sCcHZlC-b1o&list=PLxHabmZzFY6mbZnghbtOiYppofKPWe581&index=23",
+            "add work to do widget": "https://www.youtube.com/watch?v=cgw9pi6wUcY&list=PLxHabmZzFY6mbZnghbtOiYppofKPWe581&index=24",
+            "class progress": "https://www.youtube.com/watch?v=oybFY7yPabE&list=PLxHabmZzFY6mbZnghbtOiYppofKPWe581&index=26",
+            "classlist": "https://www.youtube.com/watch?v=4lh69B9Qsbo&list=PLxHabmZzFY6mbZnghbtOiYppofKPWe581&index=27",
+            "media library": "https://www.youtube.com/watch?v=D8fWOekyD_Q&list=PLxHabmZzFY6mbZnghbtOiYppofKPWe581&index=28",
+            "discussions for journaling": "https://www.youtube.com/watch?v=PZlq9cMtDag&list=PLxHabmZzFY6mbZnghbtOiYppofKPWe581&index=32",
+            "randomized quiz questions": "https://www.youtube.com/watch?v=SsgnoSMSIqI&list=PLxHabmZzFY6mbZnghbtOiYppofKPWe581&index=37",
+            "html editor": "https://www.youtube.com/watch?v=BEYL4Z1fgJs&list=PLxHabmZzFY6mbZnghbtOiYppofKPWe581&index=43",
+            "evaluate discussions": "https://www.youtube.com/watch?v=Rc_No_-zbYA&list=PLxHabmZzFY6mbZnghbtOiYppofKPWe581&index=47",
+            "browser support": "https://community.d2l.com/brightspace/kb/articles/5663-browser-support#supported-browsersz",
+            "send email": "https://www.brightspacehelp.usc.edu/instructors/sending-email/",
+            "turnitin": "https://www.brightspacehelp.usc.edu/instructors/turnitin-assignment-integration-student-submission-and-grading/",
+            "manage files": "https://community.d2l.com/brightspace/kb/articles/3328-about-manage-files",
+            "originality reports": "https://www.brightspacehelp.usc.edu/viewing-turnitin-originality-reports/",
+            "rubrics": "https://www.brightspacehelp.usc.edu/rubrics-grading-and-providing-feedback-for-a-turnitin-assignment/",
+            "create quiz": "https://community.d2l.com/brightspace/kb/articles/3413-create-and-configure-a-quiz",
+            "course notifications": "https://www.brightspacehelp.usc.edu/communicating-with-students/sending-notifications/",
+            "library course reserves": "https://www.brightspacehelp.usc.edu/files/2023/12/Instructor-ARES_-LTI-HELP-GUIDE.pdf",
+            "pin course": "https://bswrittentutorials.s3.us-west-1.amazonaws.com/Pin+a+Course.pdf",
+            "activate course": "https://community.d2l.com/brightspace/kb/articles/22383-activate-your-course#make-your-course-available-and-active",
+            "record video": "https://bswrittentutorials.s3.us-west-1.amazonaws.com/Record+and+Post+a+Video+or+Audio+Lecture.pdf",
+            "setup zoom": "https://bswrittentutorials.s3.us-west-1.amazonaws.com/Set+Up+Zoom+Meetings.pdf",
+            "welcome email students": "https://bswrittentutorials.s3.us-west-1.amazonaws.com/Welcome-to-Brightspace-Email-to-Students.docx",
+            "welcome email ta": "https://bswrittentutorials.s3.us-west-1.amazonaws.com/TA-Welcome-To-Brightspace-Email.docx",
+            "bookable meetings": "https://bswrittentutorials.s3.us-west-1.amazonaws.com/Set+up+Bookable+Appointments.pdf",
+            "short video note": "https://bswrittentutorials.s3.us-west-1.amazonaws.com/Record+and+Post+a+Short+Video+or+Audio+Note.pdf",
+            "syllabus template": "https://bswrittentutorials.s3.us-west-1.amazonaws.com/Syllabus-Template-June-2024.docx",
+            "login": "https://brightspace.usc.edu",
+            "extra credit": "https://www.brightspacehelp.usc.edu/instructors/set-up-extra-credit/",
+            "instructors guide": "https://www.brightspacehelp.usc.edu/instructors/"
+        }
 
-SHARED_ASSET = {
-}
+    def get_response(self, user_query):
+        user_query = user_query.lower()
+        matched_resources = []
 
-HTML_BUTTON = {
-    
-}
+        for keyword, url in self.resources.items():
+            if keyword in user_query:
+                matched_resources.append((keyword, url))
 
-SYSTEM_PROMPT = """You are an expert in zodiac symbols. You know the accurate zodiac symbol based on a person's birth month and date, and you """
+        if matched_resources:
+            return self.format_response(matched_resources)
+        return self.default_response()
 
-PHASES = {
-    "name": {
-        "name": "User Details",
-        "fields": {
-            "name": {
-                "type": "text_input",
-                "label": """What is your first name?""",
-                "helper": "First name only, please",
-                "value": "",
-            },
-            "month": {
-                "type": "radio",
-                "label": """What is your birth month?""",
-                "options": ["January","February","March","April","May","June","July","August","September","October","November","December"],
-            },
-            "day": {
-                "type": "number_input",
-                "label": """What is your birth day?""",
-                "min_value": 1,
-                "max_value":31
-            },
-            "year": {
-                "type": "number_input",
-                "label": """What is your birth year?""",
-                "min_value": 1900,
-                "max_value":2020
-            },
-            "system": {
-                "type": "selectbox",
-                "label": """Astrology System""",
-                "options": ["Western","Chinese"],
-            },
+    def format_response(self, matched_resources):
+        response = "Here are the resources that may help you:\n\n"
+        for keyword, url in matched_resources:
+            response += f"To {keyword}:\n"
+            response += f"1. Log in to your Brightspace account at {self.resources['login']}\n"
+            response += "2. Navigate to the relevant section\n"
+            response += f"3. Follow the detailed instructions provided in this guide: {url}\n\n"
+        response += self.get_footer()
+        return response
 
+    def default_response(self):
+        response = "I'm sorry, I couldn't find specific information for your query. "
+        response += "For general guidance, please visit the Brightspace instructors guide: "
+        response += f"{self.resources['instructors guide']}\n\n"
+        response += self.get_footer()
+        return response
 
-        },
-        "phase_instructions": "",
-        "user_prompt": "My name is {name}. I was born on {month} {day}, {year}. Please provide me my zodiac symbol, and give a short horoscope for the day, according to the {system} astrology system.",
-        "ai_response": True,
-        "allow_skip": True,
-        "show_prompt": True,
-        #"read_only_prompt": False
-    }
+    def get_footer(self):
+        footer = "If you need further assistance, please feel free to "
+        footer += "[schedule a Zoom meeting](https://calendly.com/d/cpxx-s9g-9qv/brightspace-troubleshooting) "
+        footer += "with our Instructional Designer or reach out to:\n"
+        footer += "- Technical Support Line: 888-895-2812\n"
+        footer += "- Email Support: usc@d2l.com\n"
+        footer += "**For USC-Specific Requests**:\n"
+        footer += "- ITS Email Support: brightspace@usc.edu\n"
+        footer += "- ITS Support Desk Hotline: 213-740-5555 (Instructors dial 2)\n"
+        footer += "*Disclaimer: Virtual assistance can make mistakes. Please verify important information.*"
+        return footer
 
+def main():
+    helpdesk = BrightspaceHelpdesk()
+    print("Welcome to the Brightspace Helpdesk Chatbot, your virtual IT support assistant dedicated to helping faculty members navigate and utilize Brightspace effectively.")
+    print("How can I assist you today? (Type 'exit' to end the conversation)")
 
-}
+    while True:
+        user_input = input("\nYour question: ")
+        if user_input.lower() == 'exit':
+            print("Thank you for using the USC Brightspace IT Helpdesk. Goodbye!")
+            break
+        response = helpdesk.get_response(user_input)
+        print("\nHelpdesk: " + response)
 
-def prompt_conditionals(prompt, user_input, phase_name=None):
-    #TO-DO: This is a hacky way to make prompts conditional that requires the user to know a lot of python and get the phase and field names exactly right. Future task to improve it. 
-
-
-
-
-    return prompt
-    
-selected_llm = "gpt-4o-mini"
-
-
-LLM_CONFIGURATIONS = {
-    "gpt-4o-mini": {
-        "model": "gpt-4o-mini",
-        "frequency_penalty": 0,
-        "max_tokens": 1000,
-        "presence_penalty": 0,
-        "temperature": 1,
-        "top_p": 1,
-        "price_input_token_1M":0.50,
-        "price_output_token_1M":1.50
-    },
-    "gpt-4-turbo": {
-        "model": "gpt-4-turbo",
-        "frequency_penalty": 0,
-        "max_tokens": 1000,
-        "presence_penalty": 0,
-        "temperature": 1,
-        "top_p": 1,
-        "price_input_token_1M":10,
-        "price_output_token_1M":30
-    },
-    "gpt-4o": {
-        "model": "gpt-4o",
-        "frequency_penalty": 0,
-        "max_tokens": 250,
-        "presence_penalty": 0,
-        "temperature": 1,
-        "top_p": 1,
-        "price_input_token_1M":5,
-        "price_output_token_1M":15
-    },
-    "gemini-1.0-pro": {
-        "model": "gemini-1.0-pro",
-        "temperature": 1,
-        "top_p": 0.95,
-        "max_tokens": 1000,
-        "price_input_token_1M":.5,
-        "price_output_token_1M":1.5
-    },
-    "gemini-1.5-flash": {
-        "model": "gemini-1.5-flash",
-        "temperature": 1,
-        "top_p": 0.95,
-        "max_tokens": 1000,
-        "price_input_token_1M":.35,
-        "price_output_token_1M":1.05
-    },
-    "gemini-1.5-pro": {
-        "model": "gemini-1.5-pro",
-        "temperature": 1,
-        "top_p": 0.95,
-        "max_tokens": 1000,
-        "price_input_token_1M":3.5,
-        "price_output_token_1M":10.50
-    },
-    "claude-3.5-sonnet": {
-        "model": "claude-3-5-sonnet-20240620",
-        "max_tokens": 1000,
-        "temperature": 1,
-        "price_input_token_1M": 3,
-        "price_output_token_1M": 15
-    },
-    "claude-opus": {
-        "model": "claude-3-opus-20240229",
-        "max_tokens": 1000,
-        "temperature": 1,
-        "price_input_token_1M": 15,
-        "price_output_token_1M": 75
-    },
-    "claude-sonnet": {
-        "model": "claude-3-sonnet-20240229",
-        "max_tokens": 1000,
-        "temperature": 1,
-        "price_input_token_1M": 3,
-        "price_output_token_1M": 15
-    },
-    "claude-haiku": {
-        "model": "claude-3-haiku-20240307",
-        "max_tokens": 1000,
-        "temperature": 1,
-        "price_input_token_1M": 0.25,
-        "price_output_token_1M": 1.25
-    }
-}
-
-SCORING_DEBUG_MODE = True
-DISPLAY_COST = True
-
-COMPLETION_MESSAGE = "You've reached the end! I hope you learned something!"
-COMPLETION_CELEBRATION = False
+if __name__ == "__main__":
+    main()
